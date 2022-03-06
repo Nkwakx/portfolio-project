@@ -12,7 +12,7 @@ export default function Lesson5({
     min = 20,
     max = 50,
     increment = 1,
-    decrement = 1, }) {
+    decrement = 1}) {
 
     const [count, setCount] = useState(min);
 

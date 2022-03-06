@@ -1,5 +1,4 @@
 import Footer from '../components/Footer';
-import ScrollToTopBtn from "./ScrollToTop";
 import Routing from '../routes/Routing';
 
 function App() {
@@ -7,7 +6,6 @@ function App() {
     <>
       <div className='App'>
         <Routing />
-        <ScrollToTopBtn />
         <Footer year={new Date().getFullYear()} />
       </div>
     </>

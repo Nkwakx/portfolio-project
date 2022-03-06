@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from 'react';
 import NavBar from "../components/NavBar";
 import userprofile from "../assets/images/userprofile.png";
 import { BsLinkedin } from 'react-icons/bs';
@@ -8,7 +7,6 @@ import { BsTwitter } from 'react-icons/bs';
 import { BsFacebook } from 'react-icons/bs';
 
 export default function About() {
-    const [quickNav, setQuickNav] = useState("#");
     return (
         <div className="App">
             {<NavBar />}
@@ -51,7 +49,7 @@ export default function About() {
                         <p>With the litle experience I have working on both backend and frontend. I build web application from scratch using languages below.</p>
 
                         <br />
-                        <div  className="btn-contact"><a href="#contact" onClick={() => setQuickNav("#contact")}>Contact Me!</a></div>
+                        <div><button className="btn-contact">Contact Me!</button></div>
                         <br />
 
                         <h5 className="sentence">Front - End

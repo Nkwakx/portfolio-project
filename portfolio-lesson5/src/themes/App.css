@@ -61,7 +61,7 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-.App-nav .lessons {
+.App-nav .lessons{
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
@@ -237,15 +237,10 @@
 .about h1 {
   margin-bottom: 15px;
 }
-.about p{
-  margin-bottom: 15px;
-}
 
-.btn-contact a {
+.about .btn-contact {
   color: #e38434;
-  font-size: 17px;
-  padding: 10px;
-  border: 2px solid #e38434;
+  font-size: 16px;
   justify-content: space-between;
   align-items: center;
   text-align: center;
@@ -256,7 +251,7 @@
   transition: all 0.5s ease-out;
 }
 
-.btn-contact a:hover {
+.btn-contact:hover {
   color: #fff;
   background-position: left bottom;
 }
@@ -353,8 +348,8 @@
   display: block;
   border-right: 5px dotted #dcdaa9;
 }
-.contact-social a {
-  color: black;
+.contact-social a{
+  color:black;
 }
 .contact-form {
   width: 55%;
@@ -408,11 +403,9 @@ input[type="email"] {
   border: none;
   border-bottom: 1px solid #545454;
 }
-input[type="text"]:focus,
-input[type="text"]:focus,
+input[type="text"]:focus,input[type="text"]:focus,
 input[type="tel"]:focus,
-input[type="email"]:focus,
-textarea:focus {
+input[type="email"]:focus,textarea:focus {
   background-color: rgb(205, 236, 246);
 }
 textarea {
@@ -450,9 +443,10 @@ textarea {
 /* ================== ~CONTACT END~ =================== */
 
 /* ================== ~PROJECTS STARTS~ =================== */
-.proj h1 {
+.proj h1{
   text-align: center;
 }
+
 
 .projects {
   height: 100%;
@@ -499,7 +493,7 @@ textarea {
   color: #545454;
   margin-bottom: 0;
 }
-.services-wrap .git {
+.services-wrap .git{
   float: right;
   margin-right: 55px;
   font-size: 35px;
@@ -622,7 +616,7 @@ textarea {
   border-radius: 4px;
   margin: 50px;
 }
-.mainzone h2 {
+.mainzone h2{
   padding-top: 5px;
 }
 .progress-1 {
@@ -674,11 +668,11 @@ textarea {
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
 }
-.rating {
+.rating{
   text-align: center;
   padding-bottom: 65px;
 }
-.rating h3 {
+.rating h3{
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
   color: #545454;
@@ -721,14 +715,14 @@ h2 {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.counter .btn-count:hover {
+.counter .btn-count:hover{
   background-color: #ced4da;
 }
-.jsonContent {
+.jsonContent{
   border: 2px dotted #e38434;
   border-radius: 50px;
 }
-.jsonData {
+.jsonData{
   justify-content: center;
   text-align: center;
   margin: 30px;
@@ -737,10 +731,11 @@ h2 {
   box-sizing: border-box;
   background-color: #f3f3ef;
 }
-.jsonData h1 {
+.jsonData h1{
   padding-bottom: 20px;
 }
 /* ================== ~ASSIGNMENT STARTS~ =================== */
+
 
 /* ================== ~FOOTER STARTS~ =================== */
 
@@ -758,27 +753,3 @@ h2 {
 }
 
 /* ================== ~FOOTER END~ =================== */
-
-
-/* ================== ~SCROLL BTN START~ =================== */
-
-.scroll-to-top {
-  font-size: 30px;
-  padding: 10px;
-  color: #e38434;
-  position: fixed;
-  bottom: 0.5rem;
-  right: 0.5rem;
-  animation: fadeIn 700ms ease-in-out 1s both;
-  cursor: pointer;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-/* ================== ~SCROLL BTN END~ =================== */

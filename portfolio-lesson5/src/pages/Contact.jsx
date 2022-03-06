@@ -9,7 +9,7 @@ export default function Contact() {
     return (
         <div className="App">
             {<NavBar />}
-            <section id="contact" className="container contact group">
+            <section className="container contact group">
                 <div className="contact-social">
                    <a href="mailto:nhlakahns@gmail.com"> <p><AiOutlineMail /> nhlakahns@gmail.com</p></a>
                     <a href="tel:0725071175"><p><BiPhoneCall /> (+27) 725 071 175</p></a>

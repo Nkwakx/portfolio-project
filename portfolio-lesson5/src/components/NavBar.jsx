@@ -9,7 +9,6 @@ import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 
 
 export default function NavBar() {
- 
     return (
         <div className="App">
             <header className="App-nav">

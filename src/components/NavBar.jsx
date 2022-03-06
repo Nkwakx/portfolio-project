@@ -9,7 +9,7 @@ import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 
 
 export default function NavBar() {
- 
+
     return (
         <div className="App">
             <header className="App-nav">
@@ -24,7 +24,7 @@ export default function NavBar() {
                         <NavLink className={'nav-link'} to='/contact'><i className="nav-icon"><BiMessage /></i>Contact</NavLink>
                     </div>
                 </nav>
-                        <NavLink className={'nav-link lessons'} to='/lessons'>Lessons</NavLink>
+                <NavLink className={'nav-link lessons'} to='/lessons'>Lessons</NavLink>
 
                 <div className="profile-name">Nlakaniplo Khumalo</div>
                 <img src={userprofile} alt="user-name" className="nav-img" />

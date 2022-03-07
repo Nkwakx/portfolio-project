@@ -782,3 +782,26 @@ h2 {
   }
 }
 /* ================== ~SCROLL BTN END~ =================== */
+
+.paginationBttns{
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.paginationBttns a{
+  padding: 7px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid #e38434;
+  color: #e38434;
+  cursor: pointer;
+}
+.paginationBttns a:hover{
+  color: #fff;
+  background-color: black;
+}
+.paginationActive a{
+  color: #fff;
+  background-color: black;
+}

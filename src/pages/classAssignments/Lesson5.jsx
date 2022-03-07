@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../../components/NavBar";
 import { useState, useEffect } from 'react';
 import Data from "./Data.json"
+import ReactPaginate from 'react-paginate';
 
 // I chose function component because function components are like a pure javascript functions
 // funtion components they simply accept data and display them in some form
@@ -12,12 +13,16 @@ export default function Lesson5({
     min = 20,
     max = 50,
     increment = 1,
-    decrement = 1}) {
+    decrement = 1 }) {
 
     const [count, setCount] = useState(min);
-
     const [data, setData] = useState([]);
-    
+    const [pageNumber, setPageNumber] = useState(0);
+
+    const usersPerPage = 10;
+    const pagesVisited = pageNumber * usersPerPage;
+
+
 
     function IncrementNumber() {
         if (count < max) {
@@ -42,7 +47,13 @@ export default function Lesson5({
         });
         setData(uri);
     }
-  
+    const pageCount = Math.ceil(data.length / usersPerPage);
+
+    const changePage = ({ selected }) => {
+        setPageNumber(selected)
+    };
+
+
     return (
         <>
             <div className="App">
@@ -66,16 +77,28 @@ export default function Lesson5({
 
                     <div className="jsonContent">
                         {
-                            data.map((entry) => {
-                                return (
-                                    <div className="jsonData" key={entry.id}>
-                                        <h1><strong>{entry.title}</strong></h1>
-                                        <p>{entry.content}</p><br />
-                                        <p>User number: {entry.userId}</p>
-                                    </div>
-                                );
-                            })
+                            data.slice(pagesVisited, pagesVisited + usersPerPage)
+                                .map((entry) => {
+                                    return (
+                                        <div className="jsonData" key={entry.id}>
+                                            <h1><strong>{entry.title}</strong></h1>
+                                            <p>{entry.content}</p><br />
+                                            <p>User number: {entry.userId}</p>
+                                        </div>
+                                    );
+                                })
                         }
+
+                        <ReactPaginate
+                            previousLabel={"Previous"}
+                            NextLabel={"Next"}
+                            pageCount={pageCount}
+                            onPageChange={changePage}
+                            containerClassName={"paginationBttns"}
+                            nextLinkClassName={"nextBttn"}
+                            disabledClassName={"paginationDisabled"}
+                            activeClassName={"paginationActive"}
+                        />
                     </div>
 
                 </section>
